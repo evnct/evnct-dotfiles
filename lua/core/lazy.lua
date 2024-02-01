@@ -27,6 +27,7 @@ require("lazy").setup({
 	"williamboman/mason.nvim",
 	"williamboman/mason-lspconfig.nvim",
 	"tpope/vim-surround",
+	{ "windwp/nvim-autopairs", event = "InsertEnter", opts = {} },
 	{
 		"L3MON4D3/LuaSnip",
 		dependencies = { "rafamadriz/friendly-snippets" },
