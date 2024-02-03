@@ -27,6 +27,10 @@ require("lazy").setup({
 	"williamboman/mason.nvim",
 	"williamboman/mason-lspconfig.nvim",
 	"tpope/vim-surround",
+	{
+		"saecki/crates.nvim",
+		tag = "stable",
+	},
 	{ "akinsho/toggleterm.nvim", version = "*", config = true },
 	{ "windwp/nvim-autopairs", event = "InsertEnter", opts = {} },
 	{
