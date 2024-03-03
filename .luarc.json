@@ -1,9 +1,0 @@
-{
-    "diagnostics.globals": [
-        "vim",
-        "require",
-        "_lazygit_toggle",
-        "cfg",
-        "alt"
-    ]
-}

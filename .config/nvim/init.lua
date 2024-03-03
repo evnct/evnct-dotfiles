@@ -1,7 +1,7 @@
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
-require("core.keymaps")
+-- Options
 require("core.options")
+require("core.keymaps")
 require("core.lazy")
-require("core.tweaks")
