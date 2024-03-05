@@ -9,7 +9,10 @@ return {
         return {
             require("which-key").register {
                 ["<leader>"] = {
-                    t = { name = "+telescope" }
+                    b = { name = "+Buffer"},
+                    l = { name = "+Lsp" },
+                    s = { name = "+Search" },
+                    v = { name = "+Vim"},
                 },
             }
         }
