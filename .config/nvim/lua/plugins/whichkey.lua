@@ -6,6 +6,7 @@ return {
         vim.o.timeoutlen = 300
     end,
     config = function()
+        -- a = { "<cmd>lua vim.lsp.buf.code_action()<CR>", "Code Action" },
         return {
             require("which-key").register {
                 ["<leader>"] = {

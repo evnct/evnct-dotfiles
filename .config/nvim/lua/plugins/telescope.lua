@@ -5,14 +5,9 @@ return {
     keys = function()
         local builtin = require("telescope.builtin")
         return {
-            -- Buffer Related
             { "<leader>sb", function()
                 builtin.buffers()
             end, desc = "Find Buffers" },
-            { "<leader>bf", function()
-                builtin.current_buffer_fuzzy_find()
-            end, desc = "Fuzzy Finder" },
-
             { "<leader>sf", function()
                 builtin.find_files()
             end, desc = "Find Files" },
@@ -25,8 +20,6 @@ return {
             { "<leader>so", function()
                 builtin.oldfiles()
             end, desc = "Previosly Opened Files" },
-
-            -- LSP Related
             { "<leader>lr", function()
                 builtin.lsp_references()
             end, desc = "References" },
@@ -39,8 +32,9 @@ return {
             { "<leader>lt", function()
                 builtin.lsp_implementations()
             end, desc = "Type Definitions" },
-
-            -- Vim Pickers
+            { "<leader>le", function()
+                builtin.diagnostics()
+            end, desc = "Diagnostics" },
             { "<leader>vc", function()
                 builtin.command_history()
             end, desc = "Recently Executed Commands" },
@@ -53,6 +47,11 @@ return {
             { "<leader>vk", function()
                 builtin.keymaps()
             end, desc = "Keymaps" },
+
+            -- Treesitter
+            {"<leader>t", function()
+                builtin.treesitter()
+            end, desc = "Lists Function names, variables, from Treesitter" },
         }
     end,
 }
