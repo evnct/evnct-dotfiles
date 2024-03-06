@@ -25,10 +25,10 @@ return {
               "tailwindcss-language-server",
               "typescript-language-server",
               "css-lsp",
+							"jdtls",
           },
       },
     },
-
       {
           "neovim/nvim-lspconfig",
           config = function()
