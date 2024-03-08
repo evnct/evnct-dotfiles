@@ -1,16 +1,3 @@
-# Fish local config
-.config/fish/config-local.fish
-.config/fish/fish_variables.x86_64
-
-# Vim
-Session.vim
-.vim/bundle/
-.vimrc_sample
-.vim/ftdetect/Dockerfile.vim
-.vim/syntax/Dockerfile.vim
-.vim/snippets/
-.luarc.json
-
 *.o
 \#*#
 *#
@@ -37,4 +24,20 @@ Gemfile.lock
 node_modules
 bower_components
 fishd.*
+.idea/
+
+# Fish local config
+.config/fish/config-local
+.config/fish/fish_variables
+
+# Vim
+Session.vim
+.vim/bundle/
+.vimrc_sample
+.vim/ftdetect/Dockerfile.vim
+.vim/syntax/Dockerfile.vim
+.vim/snippets/
+.luarc.json
+
+
 
