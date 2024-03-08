@@ -28,6 +28,10 @@ keymap.set("n", "s<down>", "<C-w>-")
 
 -- keymap.set("n", "<Leader>e", vim.diagnostic.open_float, opts)
 
+-- for met esc is comes naturally when I want to stop higlight
+-- there for let it be esc
+keymap.set("n", "<esc>", ":noh<cr><esc>", opts)
+
 keymap.set("n", "<c-k>", vim.diagnostic.goto_next)
 keymap.set("n", "<C-j>", vim.diagnostic.goto_prev)
 
