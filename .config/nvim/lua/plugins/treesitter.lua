@@ -9,6 +9,7 @@ return {
 					"lua",
 					"rust",
 					"vim",
+					"vimdoc",
 					"java",
 					"fish",
 					"sql",
