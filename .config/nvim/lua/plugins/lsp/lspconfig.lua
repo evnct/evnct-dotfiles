@@ -2,36 +2,38 @@ return {
 	"neovim/nvim-lspconfig",
 	event = { "BufReadPre", "BufNewFile" },
 	dependencies = { "hrsh7th/cmp-nvim-lsp" },
+	lazy = false,
 	config = function()
 		local lspconfig = require("lspconfig")
 		local capabilities = require("cmp_nvim_lsp").default_capabilities()
-		local opts = { noremap = true, silent = true }
 
-		local on_attach = function(client, bufnr)
-					opts.buffer = bfnr
-					vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
-					vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
-					vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
-					vim.keymap.set("n", "<space>rn", vim.lsp.buf.rename, opts)
-					vim.keymap.set({ "n", "v" }, "<space>ca", vim.lsp.buf.code_action, opts)
-					vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
-				end,
-
-				lspconfig.lua_ls.setup({
-					capabilities = capabilities,
-					on_attach = on_attach,
-					settings = {
-						Lua = {
-							diagnostics = {
-								globals = { "vim" },
-							},
-						},
+		lspconfig.lua_ls.setup({
+			capabilities = capabilities,
+			settings = {
+				Lua = {
+					diagnostics = {
+						globals = { "vim" },
 					},
-				}),
+				},
+			},
+		})
 
-				lspconfig.tsserver.setup({
-					capabilities = capabilities,
-					on_attach = on_attach,
-				})
+		lspconfig.tsserver.setup({
+			capabilities = capabilities,
+		})
+
+		lspconfig.jedi_language_server.setup({
+			capabilities = capabilities,
+		})
+
+		vim.api.nvim_create_autocmd('LspAttach', {
+			callback = function(args)
+				vim.keymap.set('n', 'crr', vim.lsp.buf.rename, { buffer = args.buf })
+				vim.keymap.set('n', 'K', vim.lsp.buf.hover, { buffer = args.buf })
+				vim.keymap.set({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action, { buffer = args.buf })
+				vim.keymap.set('n', 'gr', vim.lsp.buf.references, { buffer = args.buf })
+				vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { buffer = args.buf })
+			end,
+		})
 	end,
 }
