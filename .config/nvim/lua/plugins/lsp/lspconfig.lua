@@ -26,6 +26,14 @@ return {
 			capabilities = capabilities,
 		})
 
+		lspconfig.jdtls.setup({
+			capabilities = capabilities
+		})
+
+		lspconfig.marksman.setup({
+			capabilities = capabilities
+		})
+
 		vim.api.nvim_create_autocmd('LspAttach', {
 			callback = function(args)
 				vim.keymap.set('n', 'crr', vim.lsp.buf.rename, { buffer = args.buf })

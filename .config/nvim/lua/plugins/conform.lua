@@ -15,8 +15,9 @@ return {
 	opts = {
 		formatters_by_ft = {
 			lua = { "stylua" },
-			python = { "isort", "black" },
+			python = { "black" },
 			javascript = { { "prettierd", "prettier" } },
+			java = { "google-java-format" },
 			sql = { "sqlfmt" },
 			rust = { "rustfmt" },
 			go = { "gofmt" },
