@@ -1,0 +1,78 @@
+live_config_reload = true
+
+[[colors.indexed_colors]]
+color = "0xcb4b16"
+index = 16
+
+[[colors.indexed_colors]]
+color = "0xd33682"
+index = 17
+
+[[colors.indexed_colors]]
+color = "0x073642"
+index = 18
+
+[[colors.indexed_colors]]
+color = "0x586e75"
+index = 19
+
+[[colors.indexed_colors]]
+color = "0x839496"
+index = 20
+
+[[colors.indexed_colors]]
+color = "0xeee8d5"
+index = 21
+
+[colors.cursor]
+cursor = "0x93a1a1"
+text = "0x002b36"
+
+[colors.normal]
+black = "0x232A2E"
+blue = "0x7FBBB3"
+cyan = "0x83C092"
+green = "0xA7C080"
+magenta = "0xD699B6"
+red = "0xE67E80"
+white = "0xFDF6E3"
+yellow = "0xDBBC7F"
+
+[colors.primary]
+background = "0x2D353B"
+foreground = "0xD3C6AA"
+
+[cursor]
+style = "Beam"
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 12.0
+
+[font.bold]
+family = "Hack Nerd Font"
+style = "Bold"
+
+[font.normal]
+family = "Hack Nerd Font"
+style = "Regular"
+
+[font.offset]
+x = 1
+y = 1
+
+[window]
+decorations = "full"
+dynamic_padding = true
+opacity = 0.85
+title = "Alacritty"
+
+[window.dimensions]
+columns = 70
+lines = 25
+
+[window.padding]
+x = 6
+y = 6
