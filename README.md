@@ -1,6 +1,6 @@
 <img align="right" width="170" height="150" src="https://tinyurl.com/52e8an9f">
 
-###  | Alacritty  | Tmux   | Fish   | Neovim |
+###  | Alacritty  | Tmux   | Fish   | Neovim | Zathura
 
 > [Remember] If this configuration does not work for you, I don't care.
 
