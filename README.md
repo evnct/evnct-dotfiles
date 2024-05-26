@@ -11,7 +11,7 @@ I'm assuming you have already installed the tools. If so, continue.
 ```
 git clone https://github.com/evnct/evnct-dotfiles.git
 cd evnct-dotfiles/.config
-cp -r nvim tmux alacritty fish ~/.config/
+cp -r nvim tmux alacritty fish zathura ~/.config/
 ```
 
 Also put Tmux to ~
